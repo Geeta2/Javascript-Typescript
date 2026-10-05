@@ -1,0 +1,156 @@
+🌳 DOM in JavaScript — Simple Explanation
+
+DOM = Document Object Model
+
+If you're learning JavaScript for Playwright, DOM is very important because Playwright interacts with the elements on a web page, and those elements are represented through the DOM.
+
+1. Think of a webpage like a tree
+
+Suppose your HTML is:
+
+<html>
+  <body>
+    <h1>Login Page</h1>
+    <input id="username">
+    <input id="password">
+    <button>Login</button>
+  </body>
+</html>
+
+The browser converts this HTML into a DOM tree:
+
+Document
+   │
+   └── html
+        │
+        └── body
+             ├── h1
+             │    └── Login Page
+             │
+             ├── input
+             │    └── username
+             │
+             ├── input
+             │    └── password
+             │
+             └── button
+                  └── Login
+
+JavaScript can use this DOM to find, change, add, or remove elements.
+
+2. Why do we need DOM?
+
+For example, this HTML:
+
+<h1 id="title">Welcome</h1>
+
+JavaScript can find it:
+
+let heading = document.getElementById("title");
+
+Now we can change it:
+
+heading.textContent = "Hello Geeta";
+
+The webpage changes from:
+
+Welcome
+
+to:
+
+Hello Geeta
+3. Common DOM methods
+getElementById()
+
+Find an element using its ID:
+
+let username = document.getElementById("username");
+querySelector()
+
+Find the first matching element:
+
+let button = document.querySelector("button");
+
+or:
+
+let username = document.querySelector("#username");
+querySelectorAll()
+
+Find multiple matching elements:
+
+let buttons = document.querySelectorAll("button");
+4. Changing HTML
+document.getElementById("title").textContent = "Login Page";
+
+Changing the HTML inside an element:
+
+document.getElementById("message").innerHTML = "<b>Hello</b>";
+5. Changing CSS
+
+HTML:
+
+<h1 id="title">Hello</h1>
+
+JavaScript:
+
+let title = document.getElementById("title");
+
+title.style.color = "red";
+title.style.fontSize = "30px";
+6. Handling a button click
+
+HTML:
+
+<button id="login">Login</button>
+
+JavaScript:
+
+let button = document.getElementById("login");
+
+button.addEventListener("click", function() {
+    console.log("Login button clicked");
+});
+
+This is called an event.
+
+Common events:
+
+click
+input
+change
+mouseover
+keydown
+submit
+⭐ DOM vs Playwright
+
+This is especially important for you.
+
+JavaScript DOM
+
+You might write:
+
+document.getElementById("username").value = "Geeta";
+
+You're directly interacting with the browser's DOM.
+
+Playwright
+
+You normally write:
+
+await page.locator("#username").fill("Geeta");
+
+or:
+
+await page.getByRole("button", { name: "Login" }).click();
+
+So you can think of it as:
+
+HTML
+  ↓
+Browser
+  ↓
+DOM
+  ↓
+JavaScript can interact with DOM
+  ↓
+Playwright can locate/interact with page elements
