@@ -1,0 +1,21 @@
+var a=10; //allowed
+
+var $=80; //allowed
+
+ 
+
+var a1=90; //allowed
+
+
+var testResult=300; //allowed
+
+
+var TEST=96; //allowed
+
+
+var test_Result=80; //allowed
+
+// var new string=50;  not allowed
+
+//var 56=63; not allowed
+

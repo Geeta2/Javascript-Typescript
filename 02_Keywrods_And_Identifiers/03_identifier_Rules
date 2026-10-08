@@ -1,0 +1,28 @@
+// 1. Camel case: (Follow this convention for variable names)
+let myName="Geeta";
+let mySchool="KHK";
+let myCollege="SDM";
+
+
+// 2. Pascal case: (Follow this convention for class and constructor names)
+let MyName="Geeta";
+let MySchool="KHK";
+let MyCollege="SDM";
+
+
+// 3. Snake case: (_ separate words with underscore)
+let my_name="Geeta";
+let my_school="KHK";
+let my_college="SDM";
+
+
+// 4. Screaming snake case: (All letters are capitalized and words are separated by underscores)
+let MY_NAME="Geeta";
+let MY_SCHHOL="KHK";
+let MY_COLLEGE="SDM";
+
+
+// 5. Hungarian notation: (Prefix the variable name with a lowercase letter that indicates its type)
+let strMyName="Geeta";
+let strMySchool="KHK";
+let strMyCollege="SDM";
