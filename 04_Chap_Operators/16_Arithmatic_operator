@@ -1,0 +1,25 @@
+// assignment operator  +,-,*, /,
+
+let a=5;
+let b=3;
+
+let sum=a + b;
+let sub=a - b;
+let mul=a * b;
+let div=a / b;
+
+console.log(sum);
+console.log(sub);
+console.log(mul);
+console.log(div);
+
+
+//modulus operator
+console.log(a%b);
+console.log(13%7);
+
+//  n%2 == 1 - odd number, [ n%2 == 0 , even]
+
+// Exponential **, power 2^3 -> 8
+console.log(2 ** 3);
+console.log(a ** b); // 10^3 -> 1000
