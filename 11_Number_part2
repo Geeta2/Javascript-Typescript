@@ -1,0 +1,20 @@
+//Numeric Seperators (ES2021+)
+
+let million=1_000_000;
+let binarySep = 0b1010_0001;
+let hexSep = 0xFF_FF;
+
+console.log(million);
+console.log(binarySep);
+console.log(hexSep);
+
+//4.. BIGINT-for arbitarily large integers
+
+let big=123456789123456789423n;
+let big2=BigInt("12345678945612338888333");
+let bigFromNum=BigInt(42);
+
+
+console.log(big);
+console.log(big2);
+console.log(bigFromNum);
